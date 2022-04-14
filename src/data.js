@@ -4,7 +4,7 @@ export const SidebarData = [
         title: 'gopgap noppwat'
     },
     {
-        image: 'https://cdn-icons.flaticon.com/png/512/1307/premium/1307714.png?token=exp=1649844553~hmac=293201b30cc5a12d3a6e951ce1642559',
+        image: 'https://cdn-icons-png.flaticon.com/512/3237/3237472.png',
         title: 'friends'
     },
     {
@@ -118,3 +118,4 @@ export const SidebarData = [
         title: 'meta business suite'
     }
 ];
+

@@ -26,6 +26,8 @@ const AppProvider = ({children}) => {
     //todo -------- when user click more button
     const [showMore, setShowMore] = useState(false);
 
+    const profileURL = 'https://scontent.fphs4-1.fna.fbcdn.net/v/t1.6435-9/81697322_2699515710127170_2422821425682317312_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeELrXw7Tun_0fzdJQCfuALnOWOu-_KBDZ05Y6778oENnepGneTCOeSN5eHUGzKGPX6Jp1hEcPfYadM_kte_Gsj7&_nc_ohc=RcDTxtfiXqsAX9HQXvH&_nc_ht=scontent.fphs4-1.fna&oh=00_AT-WpIAija0JvRh_-4FppoFhP1nd8GjCkITqPDoMLZdeRg&oe=627EDB31';
+
     const OpenPostForm = () => {
         setPostClick(true)
     }
@@ -82,7 +84,6 @@ const AppProvider = ({children}) => {
         setEditing(true);
         setEditId(id);
         setPostInput(editItem.post);
-
     }
 
     useEffect(() => {
@@ -93,10 +94,13 @@ const AppProvider = ({children}) => {
     const url = 'https://api.github.com/users';
   
     const fetchPerson = async() => {
-      const resp = await fetch(url)
-      const data = await resp.json()
-      
-      setPeople(data);
+        try {
+            const resp = await fetch(url);
+            const data = await resp.json();
+            setPeople(data);
+        } catch (error) {
+            console.log(error);
+        }
     }
   
     useEffect(() => {
@@ -119,7 +123,8 @@ const AppProvider = ({children}) => {
                 EditPost,
                 showMore,
                 setShowMore,
-                people
+                people,
+                profileURL
             }}
         >
             {children}

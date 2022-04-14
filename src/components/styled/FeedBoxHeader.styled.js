@@ -30,17 +30,20 @@ export const FeedBoxHeaderTitle = styled.div`
     h5 {
         color: ${({theme}) => theme.fontColors.gray_01};
         font-weight: 400;
+        margin-right: 5px;
     }
-    h5 > svg {
+    
+    svg {
         color: ${({theme}) => theme.fontColors.gray};
     }
 `;
 
 export const FeedBoxBody = styled.div`
-    div {
+    div.buttons {
         display: flex;
         column-gap: 5px;
-        padding: 5px;
+        padding: 3px 5px;
+        border-top: 1px solid ${({theme}) => theme.bs.body};
         border-bottom: 1px solid ${({theme}) => theme.bs.body};
     }
 
@@ -58,7 +61,21 @@ export const FeedBoxBody = styled.div`
     p {
         font-size: 25px;
         padding-bottom: 5px;
-        border-bottom: 1px solid ${({theme}) => theme.bs.body};
+    }
+
+    span {
+        display: flex;
+    }
+
+    span > p {
+        cursor: pointer;
+        font-size: 13px;
+        margin-left: 5px;
+        color: ${({theme}) => theme.fontColors.gray} !important;
+    }
+
+    span > p:hover {
+        text-decoration: underline;
     }
 `;
 

@@ -152,5 +152,4 @@ export const FeedStoryContainer = styled.div`
     .slick-slider > .slick-next {
         margin-right: 30px;
     }
-
 `;

@@ -47,7 +47,7 @@ function Post({postList}) {
                 </FeedBoxHeader>
                 <FeedBoxBody>
                   <p>{post}</p>
-                  <div>
+                  <div className='buttons'>
                     <Button bg='transparent' hov='rgba(0,0,0,.05)' color='#606770' wid='100%'>
                       <AiOutlineLike />
                       <h4>like</h4>

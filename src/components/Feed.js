@@ -9,6 +9,7 @@ import FeedSlider from './FeedSlider';
 import { useGlobalContext } from '../context';
 import {FaVideo} from 'react-icons/fa';
 import {IoMdHappy, IoMdImages} from 'react-icons/io';
+import AllPost from './AllPost';
 
 function Feed() {
   const {postList, OpenPostForm, postclick ,EditPost} = useGlobalContext();
@@ -48,6 +49,7 @@ function Feed() {
         <FeedSlider />
           {postclick &&  <PostForm />}
         <Post postList={postList} EditPost={EditPost} />
+        <AllPost />
     </FeedContainer>
   )
 }
